@@ -1,4 +1,8 @@
 import { Module } from '@nestjs/common';
+import { ConfigModule } from './config/config.module';
 
-@Module({})
-export class SharedModule {}
+@Module({
+  imports: [ConfigModule],
+  exports: [ConfigModule],
+})
+export class SharedModule { }
