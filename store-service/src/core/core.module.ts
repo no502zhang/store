@@ -1,4 +1,9 @@
 import { Module } from '@nestjs/common';
+import { GraphQLModule } from '@nestjs/graphql';
 
-@Module({})
-export class CoreModule {}
+@Module({
+    imports: [
+        // GraphQLModule.forRoot({ typePaths: ['./**/*.graphql'], }),
+    ],
+})
+export class CoreModule { }
